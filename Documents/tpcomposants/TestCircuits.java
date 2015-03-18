@@ -38,8 +38,11 @@
 		circ.traceEtats();
 		System.out.println("\n\tprobe() resetSondes() et unProbe()");
 		circ.probe();
+		circ.traceEtats();
 		circ.resetSondes();
+		circ.traceEtats();
 		circ.unProbe();
+		circ.traceEtats();
 		}
 	    public static void main(String[] args) {
 			//Construction

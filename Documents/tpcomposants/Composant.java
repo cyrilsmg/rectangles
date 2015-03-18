@@ -26,11 +26,5 @@ public abstract class Composant implements Comparable<Composant>{
 	
 	public abstract boolean getEtat() throws NonConnecteException;	
 
-	public void probe(SondesTable tableSondes){
-		
-		}
 	
-	public void unProbe(SondesTable tableSondes){
-		}
-
 }

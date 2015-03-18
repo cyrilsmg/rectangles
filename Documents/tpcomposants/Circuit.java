@@ -47,7 +47,9 @@ public class Circuit{
     }
     
     public void probe(){
-    	for(Composant x : composants)	x.probe(tableSondes);
+    	for(Composant x : composants){
+    	    if(x instanceof Porte)	((Porte)x).probe(tableSondes);
+    	    }
     }
     
     public void resetSondes(){
@@ -57,6 +59,9 @@ public class Circuit{
     }
     
     public void unProbe(){
-    	for(Composant x : composants)	x.unProbe(tableSondes);
+    	for(Composant x : composants){
+    	    if(x instanceof Porte)	((Porte)x).unProbe(tableSondes);
+    	}
     }
+    
 }

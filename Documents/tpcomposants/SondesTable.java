@@ -20,8 +20,11 @@ public class SondesTable{
 	}
 	
 	public void resetSondes(){
-		//sondesToInterrupteurs.keySet().reset();
-		//interrupteursToSondes.values().reset();
+	    
+	    //for(Interrupteur x : sondesToInterrupteurs.keySet()) 
+		  //  x.reset();
+		for(LazySonde y : interrupteursToSondes.values())
+		    y.reset();
 	}
 	
 	public void clear(){

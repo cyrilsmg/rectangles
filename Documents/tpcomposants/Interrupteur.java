@@ -26,4 +26,7 @@ public class Interrupteur extends Composant {
 	public void setIn(Composant cp){
 		in = cp;
 	}
+	
+	
+	
 }

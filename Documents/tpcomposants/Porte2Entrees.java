@@ -32,5 +32,20 @@ public abstract class Porte2Entrees extends Porte {
 		}
 	}
 
+	public void probe(SondesTable tableSondes){
+		if(in1 instanceof Interrupteur) {
+		    this.setIn1(tableSondes.getSonde((Interrupteur)in1,this,"in1"));
+		    }
+		if(in2 instanceof Interrupteur) {
+		    this.setIn2(tableSondes.getSonde((Interrupteur)in2,this,"in2"));
+		    
+		    }
+		}
 	
+	public void unProbe(SondesTable tableSondes){
+		 if(in1 instanceof LazySonde)   
+		    this.setIn1(tableSondes.getInterrupteur((LazySonde)in1));
+		 if(in2 instanceof LazySonde)   
+		    this.setIn2(tableSondes.getInterrupteur((LazySonde)in2));
+		}
 }

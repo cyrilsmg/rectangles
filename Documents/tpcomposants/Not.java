@@ -31,8 +31,18 @@ public class Not extends Porte {
 		} else {
 			
 			return !in.getEtat();
-			
-		}
+		    }
 		
-}
+        }
+        
+    public void probe(SondesTable tableSondes){
+		if(in instanceof Interrupteur) {
+		    this.setIn(tableSondes.getSonde((Interrupteur)in,this,"in"));
+		    }
+		}
+	
+	public void unProbe(SondesTable tableSondes){
+		if(in instanceof LazySonde)   
+		    this.setIn(tableSondes.getInterrupteur((LazySonde)in));
+		}
 }
